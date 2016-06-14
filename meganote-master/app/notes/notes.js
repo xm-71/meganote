@@ -1,4 +1,3 @@
-'use strict';
 
 angular.module('meganote.notes', [
   'ui.router'
@@ -19,5 +18,18 @@ angular.module('meganote.notes', [
   });
 })
 
-.controller('NotesController', function() {
+.controller('NotesController', function($scope) {
+  $scope.notes = [];
+  $scope.note = {
+    title: 'This is my note',
+    body: 'This is the body of that note.'
+  };
+
+  $scope.save = function() {
+    $scope.notes.push($scope.note);
+    $scope.note = {
+      title:'', 
+      body:''
+    };
+  }
 });
