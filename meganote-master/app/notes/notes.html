@@ -1,12 +1,13 @@
 <div class="container">
   <div class="row">
     <nav class="col-xs-4" id="sidebar">
-      <button class="btn btn-default">
+      <button class="new-note btn btn-default">
         New Note
       </button>
       <ul id="notes">
-        <li ng-repeat="note in notes"></li>
-        {{ note.title }}
+        <li ng-repeat="note in notes" ng-click="edit(note)">
+          {{ note.title }}
+        </li>
       </ul>
     </nav>
     <main class="col-xs-8" ui-view></main>
