@@ -18,21 +18,9 @@
     <input
       type="submit"
       name="commit"
-      value="Save"
+      value="{{ note._id ? 'Update Note' : 'Create Note' }}"
       class="btn btn-default">
-  </div>
-  <div class="form-actions">
-    <input
-      type="submit"
-      name="delete"
-      value="Delete"
-      class="btn btn-default">
-  </div>
-  <div class="form-actions">
-    <input
-      type="submit"
-      name="update"
-      value="Update"
-      class="btn btn-default">
+
+  <br /><a ng-click="delete()"><i class="fa fa-trash-o fa-lg"></i></a>
   </div>
 </form>
