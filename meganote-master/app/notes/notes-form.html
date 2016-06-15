@@ -11,7 +11,7 @@
     <textarea
       name="body_html"
       placeholder="Just start typing..."
-      ng-model="note.body"
+      ng-model="note.body_html"
       ></textarea>
   </p>
   <div class="form-actions">
@@ -19,6 +19,20 @@
       type="submit"
       name="commit"
       value="Save"
+      class="btn btn-default">
+  </div>
+  <div class="form-actions">
+    <input
+      type="submit"
+      name="delete"
+      value="Delete"
+      class="btn btn-default">
+  </div>
+  <div class="form-actions">
+    <input
+      type="submit"
+      name="update"
+      value="Update"
       class="btn btn-default">
   </div>
 </form>

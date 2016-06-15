@@ -44,5 +44,11 @@
     $scope.clearForm = function() {
       $scope.note = { title: '', body: '' };
     };
+
+    $scope.delete = function() {
+      NotesService.create($scope.note);
+      $scope.notes.push($scope.note);
+      $scope.note = { title: '', body: '' };
+    };
   }
 })();
