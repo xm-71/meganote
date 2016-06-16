@@ -4,10 +4,11 @@
       <button class="btn btn-default" ng-click="clearForm()">
         New Note
       </button>
-      <ul id="notes">
-        <li ng-repeat="note in notes | orderBy: '-updated_at' track by $index" ng-click="edit(note)">
+      <ul id="notes" class="list-group">
+        <li class="list-group-item" ng-repeat="note in notes | orderBy: '-updated_at' track by $index" ng-click="edit(note)">
           <div class="note-title">{{ note.title }}</div>
           <div class="note-body">{{ note.body_text }}</div>
+          <br><a ng-click="delete()"><i class="fa fa-trash-o fa-lg"></i></a>
         </li>
       </ul>
     </nav>

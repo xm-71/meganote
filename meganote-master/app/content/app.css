@@ -62,7 +62,7 @@ ul#notes {
   color: #999; }
   ul#notes li {
     border-top: 1px solid #ddd;
-    height: 100px;
+    height: 200px;
     font-size: 90%;
     cursor: pointer;
     overflow: hidden; }
