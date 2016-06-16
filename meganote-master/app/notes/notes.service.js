@@ -61,3 +61,11 @@
     };
   }
 }());
+
+//$http.get('https://meganote.herokuapp.com/notes/')
+  //.success(function(note) {
+    //console.log("Your note is: " + note);
+  //})
+  //.error(function(response, status) {
+    //console.log("The request failed with response " + response + " and status code " + status);
+  //};
