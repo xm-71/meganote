@@ -1,17 +1,20 @@
-<form ng-submit="save()">
+<flash-message></flash-message>
+<form ng-submit="save()" class="form-group">
   <p>
     <input
       type="text"
       name="title"
       id="note_title"
       placeholder="Title your note"
-      ng-model="note.title">
+      ng-model="note.title"
+      class="form-control">
   </p>
   <p>
     <textarea
       name="body_html"
       placeholder="Just start typing..."
       ng-model="note.body_html"
+      class="form-control"
       ></textarea>
   </p>
   <div class="form-actions">
@@ -20,6 +23,7 @@
       name="commit"
       value="{{ note._id ? 'Update Note' : 'Create Note' }}"
       class="btn btn-default">
+      <a ng-click="delete()"><i class="fa fa-trash-o fa-lg"></i></a>
     </div>
     </form>
 <!--<br /><a ng-click="delete()"><i class="fa fa-trash-o fa-lg"></i></a>
