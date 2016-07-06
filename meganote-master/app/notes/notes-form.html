@@ -1,4 +1,3 @@
-<flash-message></flash-message>
 <form ng-submit="save()">
   <p>
     <input
@@ -6,32 +5,32 @@
       name="title"
       id="note_title"
       placeholder="Title your note"
-      ng-model="note.title"
-      >
+      ng-model="note.title">
   </p>
   <p>
     <text-angular
       name="body_html"
       placeholder="Just start typing..."
       ng-model="note.body_html"
-
       ta-toolbar="[
-          ['bold', 'italics', 'underline'],
-          ['ul','ol','indent','outdent'],
-          ['html'],
-          ['insertLink']
+        ['bold', 'italics', 'underline'],
+        ['ul', 'ol', 'indent', 'outdent'],
+        ['insertLink'],
+        ['html']
       ]"
       ></text-angular>
   </p>
-  <br>
   <div class="form-actions">
     <input
       type="submit"
       name="commit"
       value="{{ note._id ? 'Update Note' : 'Create Note' }}"
       class="btn btn-default">
-      <a ng-click="delete()"><i class="fa fa-trash-o fa-lg"></i></a>
-    </div>
-    </form>
-<!--<br /><a ng-click="delete()"><i class="fa fa-trash-o fa-lg"></i></a>
--->
+
+    <a ng-click="delete()" ng-show="note._id"><i class="fa fa-trash-o fa-lg"></i></a>
+  </div>
+</form>
+
+<flash-message
+  duration="3000"
+  show-close="false"></flash-message>

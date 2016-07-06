@@ -1,16 +1,14 @@
 (function() {
-  var app = angular.module('meganote', [
+  angular.module('meganote', [
     'ui.router',
     'ngFlash',
     'textAngular',
-    'meganote.notes',
-    'meganote.layout'
-  ]);
+    'meganote.notes'
+  ])
+    .config(config);
 
+  config.$inject = ['$urlRouterProvider'];
   function config($urlRouterProvider) {
     $urlRouterProvider.otherwise('/notes/');
   }
-
-  config.$inject = ['$urlRouterProvider'];
-  app.config(config);
 })();

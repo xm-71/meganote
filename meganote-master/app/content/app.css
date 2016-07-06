@@ -21,12 +21,10 @@ color: #FE5F55; }
 
 header .well {
   padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: #44aa66;
-}
+  padding-bottom: 5px; }
   header .well .user-links {
     float: right;
-    color: #44aa66; }
+    color: #ccc; }
     header .well .user-links a {
       cursor: pointer; }
 
@@ -35,7 +33,7 @@ a:link, a:visited, a:hover, a:active {
 
 i.fa-trash-o {
   cursor: pointer;
-  color: #44aa66;
+  color: #ccc;
   vertical-align: middle;
   margin-left: 1em; }
   i.fa-trash-o:hover {
@@ -64,7 +62,7 @@ ul#notes {
   color: #999; }
   ul#notes li {
     border-top: 1px solid #ddd;
-    height: 200px;
+    height: 100px;
     font-size: 90%;
     cursor: pointer;
     overflow: hidden; }
@@ -96,7 +94,7 @@ ul#notes {
   width: 300px;
   font-size: 120%;
   border-radius: 4px;
-  border: 2px solid #44aa66;
+  border: 1px solid #ccc;
   padding: 0.25em; }
 
 #welcome h1 {
@@ -111,14 +109,17 @@ span.login {
 .ta-editor {
   margin-top: 0.5em; }
 
-  .alert.mega-alert {
-
-  }
-
-  .alert-success.mega-alert{
-
-  }
-
-  .alert-danger.mega-alert{
-
-  }
+body .alert.alert-success {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  border: none;
+  position: absolute;
+  right: 1rem;
+  bottom: 0;
+  color: #d3d3d3;
+  background-color: inherit;
+}
+body .alert-danger {
+  margin-top: 1rem;
+}
